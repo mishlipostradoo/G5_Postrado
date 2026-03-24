@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizza by the Slice</title>
+	
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo+Black&family=Bungee&family=Cinzel:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monsieur+La+Doulaise&family=Pacifico&family=Pinyon+Script&family=Roboto+Slab:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body class="nav-compact page-order">
+
+<!-- NAVBAR -->
+<header>
+	<div class="navbar">
+		<div class="logo">
+			<img src="assets/pizza-logo.png" alt="logo">
+			<span>PIZZA BY THE SLICE</span>
+		</div>
+		
+		<nav>
+			<ul>
+				<li><a href="../pizza_order.html">Home</li>
+				<li><a href="about-us.html">About Us</li>
+				<li><a href="order-form.html">Order Form</li>
+			</ul>
+		<nav>
+		
+	</div>
+</header>
+
+<section class="pd-container">
+
+<h1>ORDER FORM</h1>
+
+<form>
+
+<input class="step-toggle" type="radio" name="step" id="step-personal" checked>
+<input class="step-toggle" type="radio" name="step" id="step-pizza">
+<input class="step-toggle" type="radio" name="step" id="step-toppings">
+<input class="step-toggle" type="radio" name="step" id="step-fulfillment">
+<input class="step-toggle" type="radio" name="step" id="step-summary">
+
+<div class="form-step" data-step="personal">
+<p class="breadcrumb"><b>Personal Details</b></p>
+<div class="form-box">
+<h2 class="form-title">Personal Details</h2>
+
+<div class="form-body">
+<div class="row">
+<label>Full Name: <span>*</span></label>
+
+<div class="anme-fields">
+<input type="text" name="firstname" placeholder="First Name"
+required minlength="5" maxlength="60">
+</div>
+</div>
+
+<div class="row">
+<label>Email Address: <span>*</span></label>
+
+<input type="email" name="email" 
+required
+placeholder="e.g. juandelacruz@gmail.com">
+</div>
+
+<div class="row">
+<label>Phone Number: <span>*</span></label>
+
+
+<input type="tel"
+name="phone"
+pattern=[0-9]{7,11}"
+requiredplaceholder="e.g. 09123456789">
+</div>
+
+
+<div class="row">
+<label>Age Field: <span>*</span></label>
+
+<input type="number"
+name="age"
+min="13"
+max="99"
+required>
+</div>
+</div>
+
+<div class="buttons">
+<label for="step-pizza" class="next">Next &rarr;</label>
+
+</div>
+
+</div>
+</div>
+
+<div class="form-step" data-step="pizza">
+<p class="breadcrumb">Personal Details &gt; <b>Pizza Selection</b></p>
+<div class="form-box ps-box"
+<h2 class="form-title">Pizza Selection</h2>
+
+<div class="ps-body">
+<div class="ps-section">
+	<div class="ps-label">Pizza Size: <span>*</span></label>
+	<div class="ps-sizes"
+		<label class="ps-sizes"
+			<img src="../assets/pizza-small.png" alt="Small pizza">
+			<div class="ps-size-text">
+				<span class="ps-size-name">SMALL</span>
+				<span class="ps-size-meta">10 inch</span>
+			</div>	
+			<input type="radio" name="size" value="small" required>
+		</label>
+
+	<div class="ps-sizes"
+		<label class="ps-sizes"
+			<img src="../assets/pizza-medium.png" alt="Medium pizza">
+			<div class="ps-size-text">
+				<span class="ps-size-name">MEDIUM</span>
+				<span class="ps-size-meta">12 inch</span>
+			</div>
+			<input type="radio" name="size" value="medium" checked>
+		</label>
+	
+	<div class="ps-sizes"
+		<label class="ps-sizes"
+			<img src="../assets/pizza-large.png" alt="Large pizza">
+			<div class="ps-size-text">
+				<span class="ps-size-name">LARGE</span>
+				<span class="ps-size-meta">14 inch</span>
+			</div
+			<input type="radio" name="size" value="large">
+		</label>
+		
+	<div class="ps-sizes"
+		<label class="ps-sizes"
+			<img src="../assets/pizza-xl.png" alt="Extra large pizza">
+			<div class="ps-size-text">
+				<span class="ps-size-name">EXTRA LARGE</span>
+				<span class="ps-size-meta">16 inch</span>
+			</div
+			<input type="radio" name="size" value="extra-large">
+		</label>
+	</div>
+		
+	<div class="ps-section ps-selects">
+		<div class="ps-select-group">
+			<label class="ps-label" for="crust">Crust Type: <span>*</span></label>
+			<select id="crust" name="crust" class="ps-select" required>
+				<option value="" selected disabled>--Choose a crust --</option>
+				<option>Thin</option>
+				<option>Thick</option>
+				<option>Stuffed</option>
+				<option>Gluten-Free</option>
+			</select>
+		</div>
+		
+		<div class="ps-select-group">
+			<label class="ps-label" for="sauce">Sauce: <span>*</span></label>
+			<select id="sauce" name="sauce" class="ps-select" required>
+				<option value="" selected disabled>--Choose a sauce --</option>
+				<optgroup label="Classic">
+					<option>Tomato</option>
+					<option>Garlic White</option>
+				</optgroup>
+				<optgroup label="Special">
+					<option>Pesto</option>
+					<option>Barbecue</option>
+				</optgroup>
+			</select>
+		</div>
+	<div>
+			
+			
+			</select>
+		</div>
+		
+<div class="buttons ps-buttons">
+	<button type="reset" class="reset">Start Over</button>
+	<label for="step-personal" class="back">&larr; Back</label>
+	<label for="step-toppings" class="next">Next &rarr;</label>
+</div>
+
+</div>
+</div>
+
+<div class="form-step" data-step="toppings">
+<p class="breadcrumb>Personal Details &gt; Pizza Selection &gt; <b> Toppings</b></p>
+<div class="box">
+
+<p class="h2">Toppings: <span>*</span></p>
+<p class="offer">(Offers 8 toppings)</p>
+
+<div class="toppings">
+
+<div class="column">
+
+<label>
+<input type="checkbox" checked disabled>
+Cheese
+<img src="../assets/cheese.png">
+</label>
+
+<label>
+<input type="checkbox">
+Pepperoni
+<img src="../assets/pepperoni.png">
+</label>
+
+<label>
+<input type="checkbox">
+Mushrooms
+<img src="../assets/mushroom.png"> class="topping-img--mushroom">
+</label>
+
+<label>
+<input type="checkbox">
+Onions
+<img src="../assets/onions.png">
+</label>
+		
+</div>
+
+<div class="column">
+
+<label>
+<input type="checkbox">
+Bell Pepper
+<img src="../assets/bell-pepper.png">
+</label>
+
+<label>
+<input type="checkbox">
+Olives
+<img src="../assets/olives.png">
+</label>
+
+<label>
+<input type="checkbox">
+Bacon
+<img src="../assets/bacon.png">
+</label>
+
+<label>
+<input type="checkbox" title="Warning: Pineapple on pizza is controversial!"> 
+Pineapple
+<img src="../assets/pineapple.png">
+</label>
+		
+</div>
+
+</div>
+
+<div class="buttons">
+<button type="reset" class="reset">Start Over</button>
+<label for="step-pizza" class="back">&larr; Back</label>
+<label for="step-fulfillment" class="next">Next &rarr;</label>
+</div>
+
+</div>
+</div>
+
+<div class="form-step" data-step="fulfillment">
+<p class="breadcrumb>Personal Details &gt; Pizza Selection &gt; <b> Toppings</b></p>
+<div class="form-box fp-box">
+<h2 class="form-title">Fulfillment &amp; Payment</h2>
+
+<div class="fp-row fp-delivery"
+	<div class="fp-label">Delivery Method: <span>*</span></div>
+	<label class="fp-radio">
+		<input type="radio" name="delivery" value="home" required>
+		Home delivery
+	</label>
+	<label class="fp-radio">
+		<input type="radio" name="delivery" value="pickup" required>
+		Store pickup
+	</label>
+</div>
+
+<div class="fp-row">
+	<label class="fp-label" for="address">Address: <span>*</span></label>
+	<textarea id="address" name="address" class="fp=text area" rows="3" placeholder="Enter you rfull address here..." required></textarea>
+</div>
+
+<fieldset class="fp-fieldset">
+	<legend>Payment Details</legend>
+		
+	<div class="fp-row";
+		<label class="fp-label" for="payment">Payment Method: <span>*</span></label>
+		<select id="payment" name="payment" class="fp-select" required>
+			<option value="" selected disabled>-- Choose a method --</option>
+			<option>Gcash</option>
+			<option>Cash on Delivery</option>
+		</select>
+	</div>
+	
+	<div class="fp-row">
+		<label class="fp-label" for="payment">Card Number (Required for credit card only:</label>
+		<select id="card-number" name="card-number" class="fp-input" type="text" placeholder="1234567890123456">
+	</div>
+</fieldset>
+
+<div class="buttons fp-buttons">
+<button type="reset" class="reset">Reset</button>
+<label for="step-toppings" class="back">&larr; Back</label>
+<label for="step-summary" class="next">Next &rarr;</label>
+</div>		
+
+</div>
+</div>
+
+<div class="form-step" data-step="summary">
+<p class="breadcrumb>Personal Details &gt; Pizza Selection &gt; <b> Toppings</b></p>
+<div class="form-box os-box">
+<h2 class="form-title">Order Summary</h2>
+
+<div class="os-table-wrap"
+<table class="os-table">
+	<thead>
+		<tr>
+			<th>Size</th>
+			<th>Base Price</th>
+			<th>Extra Toppings (each)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Small</td>
+			<td>199.00</td>
+			<td>20.00</td>
+		</tr>
+		<tr class="highlight">
+			<td>Medium</td>
+			<td>299.00</td>
+			<td>25.00</td>
+		</tr>
+		<tr>
+			<td>Large</td>
+			<td>399.00</td>
+			<td>20.00</td>
+		</tr>
+		<tr class="highlight">
+			<td>Extra Large</td>
+			<td>499.00</td>
+			<td>35.00</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+
+<div class="os-total">
+	<span class="os-total-label">Total</span>
+	<span class="os-total-value">1,506.00</span>
+</div>
+</div>
+</div>
+
+<div class="modal-backdrop" id="order-modal" aria-hideen="true">
+<div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+	<div class="modal-check"</div>
+	<h3 id="modal-title">Thank you for your purchase!</h3>
+	<a class="modal-home" href="../pizza_order.html">Back to Home</a>
+</div>
+</div>
+
+</form>
+
+</section>
+
+</body>
+</html>
+
+	
+		
+			
+
+
+
+		
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+	</div>
+</header>
+
+
+
+
+
